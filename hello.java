@@ -3,6 +3,7 @@ public class hello{
         System.out.println("Hello World");
         System.out.println("This is DevOps");
         System.out.println(" Updated This is DevOps");
-         System.out.println(" Updated This is DevOps");
+        System.out.println(" Updated This is DevOps");
+        System.out.println("Hello Jenkins");
     }
 }
