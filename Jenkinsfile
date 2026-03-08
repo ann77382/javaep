@@ -7,26 +7,21 @@ pipeline {
                 echo 'Fetching from Repo'
                 git 'https://github.com/ann77382/javaep.git'
             }
-        }
-         stage('Build') {
+
+        stage('Build') {
             steps {
-                echo 'Building the Program'
-                bat 'javac hello.java'
+                echo "Building Java Project"
+                bat 'javac Hello.java'
+                bat 'java Hello'
             }
         }
-        stage('Execute') {
+
+        stage('Deploy') {
             steps {
-                echo 'Executing'
-                bat 'java hello'
+                echo "Deploying application..."
             }
         }
-    }
-    post{
-        success{
-            echo 'Pipeline built Successfully'
-        }
-        failure{
-            echo 'Pipeline Failed'
-        }
+
     }
 }
+          
