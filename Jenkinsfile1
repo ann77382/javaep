@@ -9,7 +9,7 @@ pipeline{
     stage('Publish'){
       steps{
         publishHTML([
-          allowmissing:true,
+          allowMissing:true,
           alwaysLinktoLastBuild:false,
           KeepAll:false,
           reportDir:'.',
