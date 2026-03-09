@@ -1,42 +1,162 @@
 <!DOCTYPE HTML>
-<!-- THE DOCTYPE tells the browser what type of webpage to render, the doctype used in this website is HTML5 which is the most recent HTML. -->
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8">
-	<title>My Pimpin Website</title>
-	<!-- THE TITLE element is the name of the page, it is also visible in the browser tab. Its always good practice to give each page an appropriate title. -->
-	<meta name="description" content="A sample website, nothin fancy">
-      <meta http-equiv="author" content="Francisco Campos Arias">
-      <meta name="keywords" content="html, css, web, design, sample, practice">
-      <!-- These are META TAGS, they're used to describe the website, this information is read mainly by search engines like GOOGLE, YAHOO, ETC... -->	
-	<link rel="stylesheet" href="style.css">
-	<script src="http://localhost:8080/target/target-script-min.js#anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Web Dev Portfolio - Francisco Arias</title>
+    <meta name="description" content="A sample website for a web development portfolio">
+    <meta http-equiv="author" content="Francisco Campos Arias">
+    <meta name="keywords" content="html, css, web, design, sample, practice, portfolio">
+    <!-- Links to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+	<style>
+		/* A simple CSS reset for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes layout calculations easier */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Use a common, readable font */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px; /* Constrains the width for better readability */
+    margin: 0 auto; /* Centers the container on the page */
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid #007BFF;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+main {
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+    margin-bottom: 1rem;
+    color: #007BFF;
+}
+
+.features-container {
+    display: flex; /* Uses Flexbox for easy layout of feature boxes */
+    justify-content: space-between;
+    gap: 20px; /* Space between the feature boxes */
+}
+
+.feature {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1; /* Ensures equal width distribution */
+}
+
+.feature a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #fff;
+    background: #007BFF;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+	</style>
 </head>
 <body>
-	<div class="container">
-<!-- THIS ACTUAL CONTENT BEGINS HERE...this is called a comment. which can only be seen when viewing the source code. This text CANNOT be seen by the browser. Its helpful when you need to place notes, comments or reminders in your code -->
-	<header>
-		<div class="header">
-			<h1>Welcome</h1>
-		</div>
-	</header>
-	<!-- END HEADER | the header element in new to HTML5 -->
-		<div class="main">
-			<h2>This is just an example with some web content. This is the Hero Unit.</h2>
-		</div>
-		<div class="feature">
-			<h3>Featured Content 1</h3>
-			<p>lorem ipsum dolor amet lorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum.</p>
-			<!-- LOREM IPSUM is universally used. Lorem ipsum is dummy text, it does't really mean anything. Its used to fill space or for mockups. -->
-		</div>
-		<div class="feature">
-			<h3>Featured Content 2</h3>
-			<p>lorem ipsum dolor amet lorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor.</p>
-		</div>
-	<footer>
-		&copy;2012 Francisco Campos Arias, All Rigts Reserved.
-	</footer>
-	<!-- END FOOTER | the footer element is also new to HTML5 -->
-	</div>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Welcome to My Portfolio</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main" id="about">
+            <h2>Hello! I'm a Web Developer.</h2>
+            <p>I specialize in HTML, CSS, and modern web design techniques. This is a demonstration of a simple, clean, and responsive layout using the [CSS Box Model](https://developer.mozilla.org) and basic styling principles.</p>
+        </main>
+
+        <section class="features-container" id="work">
+            <div class="feature">
+                <h3>Featured Project 1: E-commerce Site</h3>
+                <p>Developed a responsive e-commerce platform using modern CSS grid layouts, ensuring a consistent user experience across devices.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="feature">
+                <h3>Featured Project 2: Blog Design</h3>
+                <p>Designed and styled a clean, blog interface with smooth scrolling and intuitive navigation, focusing on readability and accessibility.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="feature">
+                <h3>Featured Project 3: Interactive Gallery</h3>
+                <p>Created a dynamic image gallery with CSS blend modes and transitions for a visually engaging user experience.</p>
+                <a href="#">View Project</a>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <p>Connect with me: francisco@example.com</p>
+            <p>&copy;2024 Francisco Campos Arias, All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
